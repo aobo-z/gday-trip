@@ -123,7 +123,7 @@ Jenkinsfile              CI pipeline: backend tests, frontend lint and build
 ### 1. Get the API keys
 
 The backend starts without them, but place search, place photos and the AI features return an error
-until the keys are set. Each person running the project must create their own keys:
+until the keys are set. To enable those features, create the following keys:
 
 - **Google Places API key**: in the [Google Cloud Console](https://console.cloud.google.com/), create a
   project, enable **Places API (New)**, and create an API key under *APIs & Services > Credentials*.
@@ -132,8 +132,8 @@ until the keys are set. Each person running the project must create their own ke
   project, create a browser key restricted to your frontend's origin, and create a JavaScript (vector)
   Map ID under *Google Maps Platform > Map management*. Without them, use OpenStreetMap.
 
-Never commit keys or passwords. They are read from environment variables and from the git-ignored
-`trip-planner-frontend/.env.local`.
+The backend reads its keys from environment variables (step 2) and the frontend reads its keys from
+`trip-planner-frontend/.env.local` (step 3).
 
 ### 2. Start the backend
 
