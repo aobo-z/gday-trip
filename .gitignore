@@ -1,0 +1,45 @@
+# Secrets and machine-local configuration — never commit real credentials
+.env
+.env.*
+!.env.example
+*.env.local
+**/application-local.properties
+**/application-*.local.properties
+**/application-secrets.properties
+*.jks
+*.p12
+*.pfx
+*.pem
+*.key
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# macOS system files
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+
+# Windows system files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Build output and logs
+**/target/
+**/node_modules/
+**/dist/
+*.log
+
+# npm run outside the frontend folder leaves an empty lockfile behind
+/package-lock.json
+trip-planner-backend/package-lock.json
+# Claude Code local settings (machine-specific paths)
+.claude/

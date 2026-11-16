@@ -1,0 +1,1 @@
+package com.elec5619.group3.trip_planner_backend.dto; import com.elec5619.group3.trip_planner_backend.entity.Vote.VoteValue; import jakarta.validation.constraints.NotNull; import lombok.*; @Getter @Setter public class VoteRequest { @NotNull private VoteValue vote; }
